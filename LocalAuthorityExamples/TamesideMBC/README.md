@@ -11,6 +11,8 @@ A graph of the sample record, produced with the [W3 Validation Service][w3]
 
 [w3]: http://www.w3.org/RDF/Validator/
 
+![Graph](https://raw.githubusercontent.com/GMDSP-Linked-Data/Parking/master/LocalAuthorityExamples/TamesideMBC/TamesideMBC-Graph.png)
+
 
 Open Refine Model
 ==================
