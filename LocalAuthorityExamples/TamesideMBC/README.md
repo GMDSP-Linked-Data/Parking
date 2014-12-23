@@ -1,5 +1,4 @@
-
-Sample RDF
+Tameside MBC
 ==============
 
 Output of a single parking site record, saved as [RDF/XML][rdfxml].
