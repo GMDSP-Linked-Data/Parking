@@ -1,0 +1,399 @@
+[
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://data.gmdsp.org.uk/id/localauthority/parking/",
+      "prefixes": [
+        {
+          "name": "gmdsp",
+          "uri": "http://data.gmdsp.org.uk/def/council/parking/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "geo",
+          "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+          "name": "osspr",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+        },
+        {
+          "name": "postcodeunit",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/postcode/"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "gaz",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+        },
+        {
+          "name": "locn",
+          "uri": "http://www.w3.org/ns/locn#"
+        },
+        {
+          "name": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+          "name": "dcterms",
+          "uri": "http://purl.org/dc/terms/"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value.urlify()",
+          "isRowNumberCell": false,
+          "columnName": "ID",
+          "rdfTypes": [
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/ParkingSite",
+              "curie": "gmdsp:ParkingSite"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "lang": "en",
+                "columnName": "Name"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2004/02/skos/core#notation",
+              "curie": "skos:notation",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "columnName": "ID"
+              }
+            },
+            {
+              "uri": "http://www.w3.org/ns/locn#location",
+              "curie": "locn:location",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'location/'+value.urlify()",
+                "isRowNumberCell": false,
+                "columnName": "ID",
+                "rdfTypes": [
+                  {
+                    "uri": "http://purl.org/dc/terms/Location",
+                    "curie": "dcterms:Location"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "'Location of Car Parking Site: '+value",
+                      "isRowNumberCell": false,
+                      "lang": "en",
+                      "columnName": "Name"
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/ns/locn#address",
+                    "curie": "locn:address",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "'address/'+value.urlify()",
+                      "isRowNumberCell": false,
+                      "columnName": "ID",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.w3.org/ns/locn#Address",
+                          "curie": "locn:Address"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "'Address of Car Parking Site: '+value",
+                            "isRowNumberCell": false,
+                            "lang": "en",
+                            "columnName": "Name"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/ns/locn#addressArea",
+                          "curie": "locn:addressArea",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "cell.recon.match.id",
+                            "isRowNumberCell": false,
+                            "columnName": "Area",
+                            "rdfTypes": [
+                              {
+                                "uri": "http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/NamedPlace",
+                                "curie": "gaz:NamedPlace"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "curie": "rdfs:label",
+                                "target": {
+                                  "nodeType": "cell-as-literal",
+                                  "expression": "value",
+                                  "isRowNumberCell": false,
+                                  "lang": "en",
+                                  "columnName": "Area"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/ns/locn#postCode",
+                          "curie": "locn:postCode",
+                          "target": {
+                            "nodeType": "cell-as-resource",
+                            "expression": "'http://data.ordnancesurvey.co.uk/id/postcodeunit/'+value",
+                            "isRowNumberCell": false,
+                            "columnName": "PostcodeUnit",
+                            "rdfTypes": [
+                              {
+                                "uri": "http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit",
+                                "curie": "postcodeunit:PostcodeUnit"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "curie": "rdfs:label",
+                                "target": {
+                                  "nodeType": "cell-as-literal",
+                                  "expression": "value",
+                                  "isRowNumberCell": false,
+                                  "columnName": "PostCode"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/ns/locn#geometry",
+                    "curie": "locn:geometry",
+                    "target": {
+                      "nodeType": "cell-as-resource",
+                      "expression": "'http://data.gmdsp.org.uk/id/localauthorityname/thing/geometry/SMBDID'+value.urlify()",
+                      "isRowNumberCell": false,
+                      "columnName": "ID",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://www.w3.org/ns/locn#Geometry",
+                          "curie": "locn:Geometry"
+                        },
+                        {
+                          "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+                          "curie": "geo:Point"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "'Geometry points of Car Parking Site: '+value",
+                            "isRowNumberCell": false,
+                            "lang": "en",
+                            "columnName": "Name"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+                          "curie": "geo:lat",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "valueType": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "columnName": "Lat"
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+                          "curie": "geo:long",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "valueType": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "columnName": "Long"
+                          }
+                        },
+                        {
+                          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/easting",
+                          "curie": "osspr:easting",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "valueType": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "columnName": "Eastings"
+                          }
+                        },
+                        {
+                          "uri": "http://data.ordnancesurvey.co.uk/ontology/spatialrelations/northing",
+                          "curie": "osspr:northing",
+                          "target": {
+                            "nodeType": "cell-as-literal",
+                            "expression": "value",
+                            "isRowNumberCell": false,
+                            "valueType": "http://www.w3.org/2001/XMLSchema#decimal",
+                            "columnName": "Northings"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfSpaces",
+              "curie": "gmdsp:totalNumberOfSpaces",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Totalcapacity"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfDisabledSpaces",
+              "curie": "gmdsp:totalNumberOfDisabledSpaces",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Disabledspaces"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfFreeSpaces",
+              "curie": "gmdsp:totalNumberOfFreeSpaces",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "FreeSpaces"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfChargableSpaces",
+              "curie": "gmdsp:totalNumberOfChargableSpaces",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Totalchargeable"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfInfoPoints",
+              "curie": "gmdsp:totalNumberOfInfoPoints",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Helppoints"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/totalNumberOfMachines",
+              "curie": "gmdsp:totalNumberOfMachines",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Machines"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/heightRestriction",
+              "curie": "gmdsp:heightRestriction",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "lang": "en",
+                "columnName": "Heightrestriction"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/barrierType",
+              "curie": "gmdsp:barrierType",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "lang": "en",
+                "columnName": "Heightrestrictionbarriertype"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/chargingCategory",
+              "curie": "gmdsp:chargingCategory",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "lang": "en",
+                "columnName": "Chargingcategory"
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/def/council/parking/parkingType",
+              "curie": "gmdsp:parkingType",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'http://data.gmdsp.org.uk/def/council/parking/parking-type/'+value.urlify()",
+                "isRowNumberCell": false,
+                "columnName": "parkingType",
+                "rdfTypes": [],
+                "links": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

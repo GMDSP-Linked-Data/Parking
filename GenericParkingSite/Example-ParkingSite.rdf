@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:gmdsp="http://data.gmdsp.org.uk/def/council/parking/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:osspr="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+	xmlns:postcodeunit="http://data.ordnancesurvey.co.uk/ontology/postcode/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:gaz="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/12345">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSite"/>
+	<rdfs:label xml:lang="en">Example Car Park </rdfs:label>
+	<skos:notation>12345</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/location/12345">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+	<rdfs:label xml:lang="en">Location of Car Parking Site: Example Car Park </rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/address/12345">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Address"/>
+	<rdfs:label xml:lang="en">Address of Car Parking Site: Example Car Park </rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/50kGazetteer/1763">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/NamedPlace"/>
+	<rdfs:label xml:lang="en">Adswood</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/address/12345">
+	<locn:addressArea rdf:resource="http://data.ordnancesurvey.co.uk/id/50kGazetteer/1763"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK12LX">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit"/>
+	<rdfs:label>SK1 2LX</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/address/12345">
+	<locn:postCode rdf:resource="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK12LX"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/location/12345">
+	<locn:address rdf:resource="http://data.gmdsp.org.uk/id/localauthority/parking/address/12345"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthorityname/thing/geometry/SMBDID12345">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+	<rdfs:label xml:lang="en">Geometry points of Car Parking Site: Example Car Park </rdfs:label>
+	<geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-2.145061257</geo:lat>
+	<geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.4051566354</geo:long>
+	<osspr:easting rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">389824.159960607</osspr:easting>
+	<osspr:northing rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">390454.392844268</osspr:northing>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/location/12345">
+	<locn:geometry rdf:resource="http://data.gmdsp.org.uk/id/localauthorityname/thing/geometry/SMBDID12345"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthority/parking/12345">
+	<locn:location rdf:resource="http://data.gmdsp.org.uk/id/localauthority/parking/location/12345"/>
+	<gmdsp:totalNumberOfSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</gmdsp:totalNumberOfSpaces>
+	<gmdsp:totalNumberOfDisabledSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</gmdsp:totalNumberOfDisabledSpaces>
+	<gmdsp:totalNumberOfFreeSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</gmdsp:totalNumberOfFreeSpaces>
+	<gmdsp:totalNumberOfChargableSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</gmdsp:totalNumberOfChargableSpaces>
+	<gmdsp:totalNumberOfInfoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</gmdsp:totalNumberOfInfoPoints>
+	<gmdsp:totalNumberOfMachines rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</gmdsp:totalNumberOfMachines>
+	<gmdsp:heightRestriction xml:lang="en">2.6m</gmdsp:heightRestriction>
+	<gmdsp:barrierType xml:lang="en">Dual swingbeam</gmdsp:barrierType>
+	<gmdsp:chargingCategory xml:lang="en">Class A</gmdsp:chargingCategory>
+	<gmdsp:parkingType rdf:resource="http://data.gmdsp.org.uk/def/council/parking/parking-type/pay-and-display"/>
+</rdf:Description>
+
+</rdf:RDF>

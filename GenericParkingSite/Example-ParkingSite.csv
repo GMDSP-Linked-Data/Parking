@@ -1,0 +1,2 @@
+ID,Name,Area,City,PostCode,PostcodeUnit,Eastings,Northings,Lat,Long,parkingType,Totalcapacity,Disabledspaces,Totalchargeable,FreeSpaces,parentchild,Chargingcategory,electric Vehicle,Helppoints,CCTVcameras,Machines,Heightrestriction,Heightrestrictionbarriertype,ParkMark,Operator,Operator URI
+12345,Example Car Park ,Adswood,Stockport,SK1 2LX,SK12LX,389824.159960607,390454.392844268,-2.145061257,53.4051566354,Pay and Display,100,10,100,10,10,Class A,1,1,2,2,2.6m,Dual swingbeam,N,Local Authority Parking,http://example.org
