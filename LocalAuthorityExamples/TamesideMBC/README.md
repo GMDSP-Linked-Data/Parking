@@ -2,9 +2,9 @@
 Sample RDF
 ==============
 
-Output of a single parking site record, saved as [RDF/XML][rdf].
+Output of a single parking site record, saved as [RDF/XML][rdfxml].
 
-[rdf]:https://github.com/GMDSP-Linked-Data/Parking/blob/master/LocalAuthorityExamples/TamesideMBC/TamesideMBC_-ParkingSites.rdf
+[rdfxml]:https://github.com/GMDSP-Linked-Data/Parking/blob/master/LocalAuthorityExamples/TamesideMBC/TamesideMBC_-ParkingSites.rdf
 
 Graph
 ===============
