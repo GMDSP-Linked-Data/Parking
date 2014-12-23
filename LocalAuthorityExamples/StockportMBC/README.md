@@ -3,7 +3,7 @@ Stockport MBC
 
 Output of a single parking site record, saved as [RDF/XML][rdfxml].
 
-[rdfxml]:https://github.com/GMDSP-Linked-Data/Parking/blob/master/LocalAuthorityExamples/StockportMBC/StockportMBC_-ParkingSites.rdf
+[rdfxml]:https://github.com/GMDSP-Linked-Data/Parking/blob/master/LocalAuthorityExamples/StockportMBC/StockportMBC_ParkingSites.rdf
 
 Graph
 ===============
@@ -20,7 +20,7 @@ Open Refine Model
 
 An export of the [Open Refine project][orp].
 
-[orp]:https://github.com/GMDSP-Linked-Data/Parking/raw/master/LocalAuthorityExamples/StockportMBC/StockportMBC_-ParkingSites.google-refine.tar.gz
+[orp]:https://github.com/GMDSP-Linked-Data/Parking/raw/master/LocalAuthorityExamples/StockportMBC/StockportMBC_ParkingSites.google-refine.tar.gz
 
 This requires [Open Refine][or] and the [RDF plug-in][rdf].
  
