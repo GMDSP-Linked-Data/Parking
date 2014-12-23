@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:gmdsp="http://data.gmdsp.org.uk/def/council/parking/"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:osspr="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:gaz="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+	xmlns:postcode="http://data.ordnancesurvey.co.uk/ontology/postcode/"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/cross-street-sk14-1ad">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSite"/>
+	<rdfs:label xml:lang="en">Cross Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/location/cross-street">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+	<rdfs:label xml:lang="en">Location of Parking Site: Cross Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/address/cross-street-sk14-1ad">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Address"/>
+	<rdfs:label xml:lang="en">Address of Car Park: Cross Street, Hyde</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/50kGazetteer/125266">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/NamedPlace"/>
+	<rdfs:label xml:lang="en">Hyde</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/address/cross-street-sk14-1ad">
+	<locn:addressArea rdf:resource="http://data.ordnancesurvey.co.uk/id/50kGazetteer/125266"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK141AD">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit"/>
+	<rdfs:label>SK14 1AD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/address/cross-street-sk14-1ad">
+	<locn:postCode rdf:resource="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK141AD"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/location/cross-street">
+	<locn:address rdf:resource="http://data.gmdsp.org.uk/id/tameside/parking/address/cross-street-sk14-1ad"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/geometry/cross-street">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+	<rdfs:label xml:lang="en">Geometry points of Parking Site: Cross Street</rdfs:label>
+	<osspr:easting rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">394682.22</osspr:easting>
+	<osspr:northing rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">395034.76</osspr:northing>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/location/cross-street">
+	<locn:geometry rdf:resource="http://data.gmdsp.org.uk/id/tameside/parking/geometry/cross-street"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/tameside/parking/cross-street-sk14-1ad">
+	<locn:location rdf:resource="http://data.gmdsp.org.uk/id/tameside/parking/location/cross-street"/>
+	<gmdsp:totalNumberOfSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">13</gmdsp:totalNumberOfSpaces>
+	<gmdsp:totalNumberOfDisabledSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</gmdsp:totalNumberOfDisabledSpaces>
+	<gmdsp:electricVehicleChargingPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">0</gmdsp:electricVehicleChargingPoint>
+</rdf:Description>
+
+</rdf:RDF>

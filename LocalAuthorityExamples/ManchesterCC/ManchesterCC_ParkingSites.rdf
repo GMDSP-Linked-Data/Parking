@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:con="http://www.w3.org/2000/10/swap/pim/contact#"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:gaz="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+	xmlns:postcode="http://data.ordnancesurvey.co.uk/ontology/postcode/"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:schema="http://schema.org/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:gmdsp="http://data.gmdsp.org.uk/def/council/parking/"
+	xmlns:osspr="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/abingdon-street">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSite"/>
+	<rdfs:label xml:lang="en">Abingdon Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/location/abingdon-street">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+	<rdfs:label xml:lang="en">Location of Parking Site: Abingdon Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/address/abingdon-street">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Address"/>
+	<rdfs:label xml:lang="en">Address of parking site: Abingdon Street</rdfs:label>
+	<locn:thoroughfare xml:lang="en">Abingdon Street</locn:thoroughfare>
+	<dcterms:description>Abingdon Street, Corner Of Major Street, M1 6DD</dcterms:description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/location/abingdon-street">
+	<locn:address rdf:resource="http://data.gmdsp.org.uk/id/manchester/parking/address/abingdon-street"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/geometry/abingdon-street">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+	<rdfs:label xml:lang="en">Geometry points of Parking Site: Abingdon Street</rdfs:label>
+	<geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.477057</geo:lat>
+	<geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-2.238957</geo:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/location/abingdon-street">
+	<locn:geometry rdf:resource="http://data.gmdsp.org.uk/id/manchester/parking/geometry/abingdon-street"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/abingdon-street">
+	<locn:location rdf:resource="http://data.gmdsp.org.uk/id/manchester/parking/location/abingdon-street"/>
+	<gmdsp:parkingType rdf:resource="http://data.gmdsp.org.uk/def/council/parking/parking-type/surface-car-park"/>
+	<schema:openingHours>Monday-Saturday 0800-2000,  Sunday 0800-1800.</schema:openingHours>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://opencorporates.com/companies/gb/03643895">
+	<rdfs:label xml:lang="en">NCP Manchester Ltd</rdfs:label>
+	<con:phone>0845 050 7080</con:phone>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/manchester/parking/abingdon-street">
+	<gmdsp:operator rdf:resource="https://opencorporates.com/companies/gb/03643895"/>
+</rdf:Description>
+
+</rdf:RDF>

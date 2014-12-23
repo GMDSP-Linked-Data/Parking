@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:gaz="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+	xmlns:postcode="http://data.ordnancesurvey.co.uk/ontology/postcode/"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:schema="http://schema.org/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:gmdsp="http://data.gmdsp.org.uk/def/council/parking/"
+	xmlns:osspr="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/church-street">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSite"/>
+	<rdfs:label xml:lang="en">Church Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/location/church-street">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+	<rdfs:label xml:lang="en">Location of Parking Site: Church Street</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/address/off-chorley-road-swinton">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Address"/>
+	<rdfs:label xml:lang="en">Address of car park: off Chorley Road, Swinton</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/50kGazetteer/226555">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/NamedPlace"/>
+	<rdfs:label xml:lang="en"> Swinton</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/address/off-chorley-road-swinton">
+	<locn:addressArea rdf:resource="http://data.ordnancesurvey.co.uk/id/50kGazetteer/226555"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/postcodeunit/M276BD">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit"/>
+	<rdfs:label>M27 6BD</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/address/off-chorley-road-swinton">
+	<locn:postCode rdf:resource="http://data.ordnancesurvey.co.uk/id/postcodeunit/M276BD"/>
+	<locn:thoroughfare xml:lang="en"> Church Street</locn:thoroughfare>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/location/church-street">
+	<locn:address rdf:resource="http://data.gmdsp.org.uk/id/salford/parking/address/off-chorley-road-swinton"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/geometry/church-street">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+	<rdfs:label xml:lang="en">Geometry points of Parking Site: Church Street</rdfs:label>
+	<geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.51247758</geo:lat>
+	<geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-2.341398499</geo:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/location/church-street">
+	<locn:geometry rdf:resource="http://data.gmdsp.org.uk/id/salford/parking/geometry/church-street"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/church-street">
+	<locn:location rdf:resource="http://data.gmdsp.org.uk/id/salford/parking/location/church-street"/>
+	<gmdsp:parkingType rdf:resource="http://data.gmdsp.org.uk/def/council/parking/parking-type/pay-and-display"/>
+	<foaf:page rdf:resource="http://www.salford.gov.uk/parking-council.htm"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://opendatacommunities.org/id/metropolitan-district-council/salford">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSiteOperator"/>
+	<rdfs:label xml:lang="en">Salford City Council</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/salford/parking/church-street">
+	<gmdsp:operator rdf:resource="http://opendatacommunities.org/id/metropolitan-district-council/salford"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:gmdsp="http://data.gmdsp.org.uk/def/council/parking/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:osspr="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+	xmlns:postcodeunit="http://data.ordnancesurvey.co.uk/ontology/postcode/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:gaz="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:dcterms="http://purl.org/dc/terms/">
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/smbcid115">
+	<rdf:type rdf:resource="http://data.gmdsp.org.uk/def/council/parking/ParkingSite"/>
+	<rdfs:label xml:lang="en">Massie Street East</rdfs:label>
+	<skos:notation>115</skos:notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/location/smbcid115">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+	<rdfs:label xml:lang="en">Location of Car Parking Site: SMBCID115</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/address/smbcid115">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Address"/>
+	<rdfs:label xml:lang="en">Address of Car Parking Site: SMBCID115</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/50kGazetteer/49153">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/NamedPlace"/>
+	<rdfs:label xml:lang="en">Cheadle</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/address/smbcid115">
+	<locn:addressArea rdf:resource="http://data.ordnancesurvey.co.uk/id/50kGazetteer/49153"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK81BN">
+	<rdf:type rdf:resource="http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit"/>
+	<rdfs:label>SK8 1BN</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/address/smbcid115">
+	<locn:postCode rdf:resource="http://data.ordnancesurvey.co.uk/id/postcodeunit/SK81BN"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/location/smbcid115">
+	<locn:address rdf:resource="http://data.gmdsp.org.uk/id/stockport/parking/address/smbcid115"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/localauthorityname/thing/geometry/SMBDID115">
+	<rdf:type rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+	<rdfs:label xml:lang="en">Geometry points of Car Parking Site: SMBCID115</rdfs:label>
+	<geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-2.17296251213833</geo:lat>
+	<geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.368961396894</geo:long>
+	<osspr:easting rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">385801.501835173</osspr:easting>
+	<osspr:northing rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">388589.676613734</osspr:northing>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/location/smbcid115">
+	<locn:geometry rdf:resource="http://data.gmdsp.org.uk/id/localauthorityname/thing/geometry/SMBDID115"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.gmdsp.org.uk/id/stockport/parking/smbcid115">
+	<locn:location rdf:resource="http://data.gmdsp.org.uk/id/stockport/parking/location/smbcid115"/>
+	<gmdsp:totalNumberOfSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">191</gmdsp:totalNumberOfSpaces>
+	<gmdsp:totalNumberOfDisabledSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</gmdsp:totalNumberOfDisabledSpaces>
+	<gmdsp:totalNumberOfFreeSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</gmdsp:totalNumberOfFreeSpaces>
+	<gmdsp:totalNumberOfChargableSpaces rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</gmdsp:totalNumberOfChargableSpaces>
+	<gmdsp:totalNumberOfInfoPoints rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</gmdsp:totalNumberOfInfoPoints>
+	<gmdsp:totalNumberOfMachines rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</gmdsp:totalNumberOfMachines>
+	<gmdsp:heightRestriction xml:lang="en">n/a</gmdsp:heightRestriction>
+	<gmdsp:barrierType xml:lang="en">None</gmdsp:barrierType>
+	<gmdsp:chargingCategory xml:lang="en">Class C Higher</gmdsp:chargingCategory>
+</rdf:Description>
+
+</rdf:RDF>
