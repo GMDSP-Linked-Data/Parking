@@ -2,9 +2,11 @@
 Sample RDF
 ==============
 
-Output of a single streetlight record, saved as RDF/XML.
+Output of a single parking site record, saved as [RDF/XML][rdf].
 
-Graphs
+[rdf]:https://github.com/GMDSP-Linked-Data/Parking/blob/master/LocalAuthorityExamples/TamesideMBC/TamesideMBC_-ParkingSites.rdf
+
+Graph
 ===============
 
 A graph of the sample record, produced with the [W3 Validation Service][w3]
@@ -17,7 +19,11 @@ A graph of the sample record, produced with the [W3 Validation Service][w3]
 Open Refine Model
 ==================
 
-An export of the [Open Refine][or] model, which requires the [RDF plug-in][rdf].
+An export of the [Open Refine project][orp].
+
+[orp]:https://github.com/GMDSP-Linked-Data/Parking/raw/master/LocalAuthorityExamples/TamesideMBC/TamesideMBC_-ParkingSites.google-refine.tar.gz
+
+This requires [Open Refine][or] and the [RDF plug-in][rdf].
  
 [or]: http://openrefine.org/
 [rdf]: http://refine.deri.ie/
